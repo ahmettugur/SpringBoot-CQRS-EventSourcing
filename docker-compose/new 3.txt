@@ -1,0 +1,16 @@
+docker run --name mongodb  -p 27017:27017 -d mongo    
+    
+docker run --name redisdb -p 6379:6379 -d redis
+
+docker run --name rabbitmq -p 15672:15672 -p 5672:5672 -d rabbitmq:3-management
+
+
+docker run -it -d --name mongodb  -p 27017:27017 --network techbankNet --restart always -v mongodb_data_container:/data/db mongo  
+
+docker run -it -d --name mysql  -p 3306:3306 --network techbankNet -e MYSQL_ROOT_PASSWORD=techbankRootPsw --restart always -v mongodb_data_container:/var/lib/mysql mysql  
+
+
+
+
+
+
