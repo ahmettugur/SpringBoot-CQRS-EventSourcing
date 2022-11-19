@@ -10,7 +10,7 @@ import lombok.experimental.SuperBuilder;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@SuperBuilder
+//@SuperBuilder(toBuilder = true)
 @EqualsAndHashCode(callSuper=true)
 public class FundsDepositedEvent extends BaseEvent {
     private double amount;

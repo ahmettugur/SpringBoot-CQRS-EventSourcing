@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.SuperBuilder;
 
 @Data
-@SuperBuilder
+//@SuperBuilder(toBuilder = true)
 @EqualsAndHashCode(callSuper=true)
 public class AccountClosedEvent extends BaseEvent {
 
