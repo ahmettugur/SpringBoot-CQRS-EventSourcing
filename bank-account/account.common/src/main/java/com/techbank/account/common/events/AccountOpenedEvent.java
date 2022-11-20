@@ -13,8 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@SuperBuilder(toBuilder = true)
-@EqualsAndHashCode(callSuper=true)
+@SuperBuilder
 public class AccountOpenedEvent extends BaseEvent {
     private String accountHolder;
     private AccountType accountType;
