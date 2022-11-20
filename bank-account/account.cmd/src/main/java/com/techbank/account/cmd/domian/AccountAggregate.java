@@ -1,4 +1,4 @@
-package com.techbank.account.cmd.domain;
+package com.techbank.account.cmd.domian;
 
 import com.techbank.account.cmd.api.commands.OpenAccountCommand;
 import com.techbank.account.common.events.AccountClosedEvent;
