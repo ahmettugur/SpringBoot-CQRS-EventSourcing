@@ -1,4 +1,4 @@
-package com.techbank.account.cmd.domian;
+package com.techbank.account.cmd.domain;
 
 import com.techbank.account.cmd.api.commands.OpenAccountCommand;
 import com.techbank.account.common.events.AccountClosedEvent;
@@ -14,6 +14,10 @@ import java.util.Date;
 public class AccountAggregate extends AggregateRoot {
     private Boolean active;
     private double balance;
+
+    public double getBalance() {
+        return this.balance;
+    }
 
     public AccountAggregate(OpenAccountCommand command) {
         raiseEvent(AccountOpenedEvent.builder()
