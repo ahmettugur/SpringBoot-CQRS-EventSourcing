@@ -1,3 +1,5 @@
+docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Size}}\t{{.Status}}\t{{.Ports}}"
+
 docker run --name mongodb  -p 27017:27017 -d mongo    
     
 docker run --name redisdb -p 6379:6379 -d redis
