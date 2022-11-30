@@ -25,6 +25,21 @@ services:
     networks:
       - techbankNet
 
+  postgresdb:
+    image: postgres
+    container_name: postgresdb
+    environment:
+      - POSTGRES_USER=admin    
+      - POSTGRES_PASSWORD=techbankRootPsw
+      - POSTGRES_DB=bankAccount    
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_container:/var/lib/postgresql/data/  
+    networks:
+      - techbankNet
+
   zookeeper:
     container_name: zookeeper
     image: bitnami/zookeeper
@@ -63,6 +78,7 @@ volumes:
     driver: local
   mongodb_data_container:
   mysql_data_container:
+  postgres_data_container:
 
 
 networks:

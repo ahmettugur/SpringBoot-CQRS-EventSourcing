@@ -34,7 +34,7 @@ public class WithdrawFundsController {
         }catch (Exception e){
             var safeErrorMessage =  MessageFormat.format("Error while processing request to withdraw funds to bank account account with id - {0}.",id);
             logger.log(Level.SEVERE, MessageFormat.format(safeErrorMessage,e.toString()));
-            return new ResponseEntity<>(new BaseResponse(safeErrorMessage),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new BaseResponse(safeErrorMessage),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
